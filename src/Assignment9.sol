@@ -10,8 +10,8 @@ contract Assignment9 is Ownable{
     address[] public  deployedContracts;
 
     // call Ownable constructor of openzeppelin contract
-    constructor (){
-    }
+    constructor() Ownable(msg.sender) {
+}
 
     // @dev Factory to deploy new instances of `SimpleContract`
     // make only the owner is the one who can call this function
